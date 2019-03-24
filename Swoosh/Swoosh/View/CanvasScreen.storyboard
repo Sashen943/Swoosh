@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zG4-sM-pYb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Canvas-->
+        <scene sceneID="Zk0-J2-rmN">
+            <objects>
+                <viewController id="zG4-sM-pYb" customClass="CanvasViewController" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfN-fP-oBP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyN-Qz-1Rs" customClass="CanvasView" customModule="Swoosh" customModuleProvider="target">
+                                <rect key="frame" x="67" y="75" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="vyN-Qz-1Rs" secondAttribute="bottom" id="8BN-gN-Sya"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vyN-Qz-1Rs" secondAttribute="trailing" id="oyG-N9-hq4"/>
+                            <constraint firstItem="vyN-Qz-1Rs" firstAttribute="leading" secondItem="rfN-fP-oBP" secondAttribute="leadingMargin" id="qwh-Oj-1Zs"/>
+                            <constraint firstItem="vyN-Qz-1Rs" firstAttribute="top" secondItem="rfN-fP-oBP" secondAttribute="topMargin" id="xKw-ue-J6F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5rv-na-1C5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Canvas" image="tab-bar-icon-draw" id="WVD-3x-qys"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIU-bc-7Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="-64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab-bar-icon-draw" width="37.5" height="37.5"/>
+    </resources>
+</document>
