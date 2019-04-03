@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E003158322523B3300216DA4 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E003158222523B3300216DA4 /* Vision.framework */; };
+		E003158522523B4500216DA4 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E003158422523B4500216DA4 /* CoreML.framework */; };
 		E0A5D27B2247D7D900E8793B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5D27A2247D7D900E8793B /* AppDelegate.swift */; };
 		E0A5D2822247D7DB00E8793B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A5D2812247D7DB00E8793B /* Assets.xcassets */; };
 		E0A5D2852247D7DB00E8793B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A5D2832247D7DB00E8793B /* LaunchScreen.storyboard */; };
@@ -14,6 +16,7 @@
 		E0A5D29B2247D7DB00E8793B /* SwooshUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A5D29A2247D7DB00E8793B /* SwooshUITests.swift */; };
 		E0C6C6F92247F4AA00B74833 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C6C6F82247F4AA00B74833 /* CanvasView.swift */; };
 		E0C6C6FB2247F4DC00B74833 /* Canvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C6C6FA2247F4DC00B74833 /* Canvas.xib */; };
+		E0D6F0B12249002400CA3CD0 /* MNIST.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E0D6F0B02249002400CA3CD0 /* MNIST.mlmodel */; };
 		E0F534222247DAC20089913F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F534212247DAC20089913F /* MenuViewController.swift */; };
 		E0F534242247DAE40089913F /* MenuScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F534232247DAE40089913F /* MenuScreen.storyboard */; };
 		E0F5342A2247E3950089913F /* CanvasScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F534292247E3950089913F /* CanvasScreen.storyboard */; };
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E003158222523B3300216DA4 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		E003158422523B4500216DA4 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		E0A5D2772247D7D900E8793B /* Swoosh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swoosh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A5D27A2247D7D900E8793B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0A5D2812247D7DB00E8793B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		E0A5D29C2247D7DB00E8793B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0C6C6F82247F4AA00B74833 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		E0C6C6FA2247F4DC00B74833 /* Canvas.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Canvas.xib; sourceTree = "<group>"; };
+		E0D6F0B02249002400CA3CD0 /* MNIST.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNIST.mlmodel; sourceTree = "<group>"; };
 		E0F534212247DAC20089913F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		E0F534232247DAE40089913F /* MenuScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuScreen.storyboard; sourceTree = "<group>"; };
 		E0F534292247E3950089913F /* CanvasScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CanvasScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E003158522523B4500216DA4 /* CoreML.framework in Frameworks */,
+				E003158322523B3300216DA4 /* Vision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E003158122523B3200216DA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E003158422523B4500216DA4 /* CoreML.framework */,
+				E003158222523B3300216DA4 /* Vision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E0A5D26E2247D7D900E8793B = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +106,7 @@
 				E0A5D28E2247D7DB00E8793B /* SwooshTests */,
 				E0A5D2992247D7DB00E8793B /* SwooshUITests */,
 				E0A5D2782247D7D900E8793B /* Products */,
+				E003158122523B3200216DA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +182,7 @@
 		E0F534252247DCE20089913F /* Dataset */ = {
 			isa = PBXGroup;
 			children = (
+				E0D6F0B02249002400CA3CD0 /* MNIST.mlmodel */,
 			);
 			name = Dataset;
 			sourceTree = "<group>";
@@ -329,6 +348,7 @@
 				E0A5D27B2247D7D900E8793B /* AppDelegate.swift in Sources */,
 				E0F5342C2247E3A40089913F /* CanvasViewController.swift in Sources */,
 				E0C6C6F92247F4AA00B74833 /* CanvasView.swift in Sources */,
+				E0D6F0B12249002400CA3CD0 /* MNIST.mlmodel in Sources */,
 				E0F534222247DAC20089913F /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
