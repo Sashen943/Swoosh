@@ -1,20 +1,16 @@
-//
-//  CanvasView.swift
-//  Swoosh
-//
-//  Created by Sashen Pillay on 2019/03/24.
-//  Copyright © 2019 Sashen Pillay. All rights reserved.
-//
-
 import UIKit
 
 class CanvasView: UIView {
-    
+
+    // MARK: Properties
+
     var lineColor: UIColor!
     var lineWidth: CGFloat!
     var path: UIBezierPath!
     var touchPoint: CGPoint!
     var startingPoint: CGPoint!
+
+    // MARK: Opertaion(s)
 
     override func layoutSubviews() {
         self.isMultipleTouchEnabled = false
@@ -49,12 +45,17 @@ class CanvasView: UIView {
     }
 
     func clearCanvas() {
-        path.removeAllPoints()
-        self.layer.sublayers = nil
-        self.setNeedsDisplay()
+        if(path != nil) {
+            path.removeAllPoints()
+            self.layer.sublayers = nil
+            self.setNeedsDisplay()
+        }
+       
     }
     
 }
+
+// MARK: Extension function
 
 extension UIImage {
     convenience init (view:UIView) {
@@ -64,4 +65,5 @@ extension UIImage {
         UIGraphicsEndImageContext()
         self.init(cgImage: image!.cgImage!)
     }
+
 }
