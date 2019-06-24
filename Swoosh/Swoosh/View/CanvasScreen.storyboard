@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zG4-sM-pYb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Canvas-->
+        <scene sceneID="Zk0-J2-rmN">
+            <objects>
+                <viewController id="zG4-sM-pYb" customClass="CanvasViewController" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfN-fP-oBP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-background" translatesAutoresizingMaskIntoConstraints="NO" id="YZL-9R-OaM">
+                                <rect key="frame" x="0.0" y="62" width="375" height="556"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="243" translatesAutoresizingMaskIntoConstraints="NO" id="OVR-Jj-eYW">
+                                <rect key="frame" x="8" y="28" width="359" height="26"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEy-Pw-zge">
+                                        <rect key="frame" x="0.0" y="2" width="16" height="22"/>
+                                        <state key="normal" image="refresh_button">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearCanvasTap:" destination="zG4-sM-pYb" eventType="touchUpInside" id="hPI-dc-RuX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QS-wG-mF9">
+                                        <rect key="frame" x="343" y="2" width="16" height="22"/>
+                                        <state key="normal" image="think_button">
+                                            <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recogniseTap:" destination="zG4-sM-pYb" eventType="touchUpInside" id="4Al-zh-xkh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyN-Qz-1Rs" customClass="CanvasView" customModule="Swoosh" customModuleProvider="target">
+                                <rect key="frame" x="47.5" y="99" width="280" height="280"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="YTB-86-g5z"/>
+                                    <constraint firstAttribute="width" constant="280" id="zSh-SX-DO5"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hellllo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEf-Mf-JlN">
+                                <rect key="frame" x="16" y="411" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rDd-Ew-kmj">
+                                <rect key="frame" x="137" y="453.5" width="119" height="114.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="jqu-OD-H4x"/>
+                                    <constraint firstAttribute="height" constant="114.5" id="pHS-nE-gPj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OVR-Jj-eYW" firstAttribute="leading" secondItem="5rv-na-1C5" secondAttribute="leading" constant="8" id="0qt-q1-zLX"/>
+                            <constraint firstItem="rDd-Ew-kmj" firstAttribute="top" secondItem="ZEf-Mf-JlN" secondAttribute="bottom" constant="16" id="55H-mS-evw"/>
+                            <constraint firstItem="OVR-Jj-eYW" firstAttribute="top" secondItem="5rv-na-1C5" secondAttribute="top" constant="8" id="5ES-F2-zd1"/>
+                            <constraint firstItem="5rv-na-1C5" firstAttribute="trailing" secondItem="YZL-9R-OaM" secondAttribute="trailing" id="7oZ-0f-lvD"/>
+                            <constraint firstItem="5rv-na-1C5" firstAttribute="trailing" secondItem="OVR-Jj-eYW" secondAttribute="trailing" constant="8" id="9Xn-i3-Y7C"/>
+                            <constraint firstItem="5rv-na-1C5" firstAttribute="trailing" secondItem="ZEf-Mf-JlN" secondAttribute="trailing" constant="16" id="A5A-0v-u2I"/>
+                            <constraint firstItem="YZL-9R-OaM" firstAttribute="bottom" secondItem="5rv-na-1C5" secondAttribute="bottom" id="HhX-Rh-eRj"/>
+                            <constraint firstItem="ZEf-Mf-JlN" firstAttribute="leading" secondItem="5rv-na-1C5" secondAttribute="leading" constant="16" id="IiU-ha-w68"/>
+                            <constraint firstItem="YZL-9R-OaM" firstAttribute="leading" secondItem="5rv-na-1C5" secondAttribute="leading" id="IpH-VY-zHc"/>
+                            <constraint firstItem="YZL-9R-OaM" firstAttribute="top" secondItem="OVR-Jj-eYW" secondAttribute="bottom" constant="8" id="Pxi-xS-p9r"/>
+                            <constraint firstItem="rDd-Ew-kmj" firstAttribute="leading" secondItem="5rv-na-1C5" secondAttribute="leading" constant="137" id="TrW-F7-iuy"/>
+                            <constraint firstItem="ZEf-Mf-JlN" firstAttribute="top" secondItem="vyN-Qz-1Rs" secondAttribute="bottom" constant="32" id="aav-Pl-UCm"/>
+                            <constraint firstItem="5rv-na-1C5" firstAttribute="trailing" secondItem="rDd-Ew-kmj" secondAttribute="trailing" constant="119" id="kig-9q-1XW"/>
+                            <constraint firstItem="vyN-Qz-1Rs" firstAttribute="centerX" secondItem="OVR-Jj-eYW" secondAttribute="centerX" id="tIb-jL-CV6"/>
+                            <constraint firstItem="vyN-Qz-1Rs" firstAttribute="top" secondItem="OVR-Jj-eYW" secondAttribute="bottom" constant="45" id="uR7-uk-dE1"/>
+                            <constraint firstItem="5rv-na-1C5" firstAttribute="bottom" secondItem="rDd-Ew-kmj" secondAttribute="bottom" constant="50" id="zrc-I7-sXf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5rv-na-1C5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Canvas" image="tab-bar-icon-draw" id="WVD-3x-qys"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="canvasView" destination="vyN-Qz-1Rs" id="FbE-by-tLy"/>
+                        <outlet property="numberImageView" destination="rDd-Ew-kmj" id="bNZ-Qr-JEn"/>
+                        <outlet property="statusLabel" destination="ZEf-Mf-JlN" id="ome-VD-IZ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIU-bc-7Np" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="-64.31784107946028"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launch-background" width="3905" height="2929"/>
+        <image name="refresh_button" width="26" height="26"/>
+        <image name="tab-bar-icon-draw" width="16" height="16"/>
+        <image name="think_button" width="26" height="26"/>
+    </resources>
+</document>
